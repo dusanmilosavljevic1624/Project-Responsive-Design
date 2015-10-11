@@ -17,52 +17,135 @@ a {
 	display: table;
 	clear: both;
 }
+.facebook {
+	color: #3B5998 !important;
+}
+.twitter {
+	color: #55ACEE !important;
+}
 
 /*Header*/
 
-.header {
+header {
 	height: 48px;
 	text-align: center;
 }
-
-.header i{
-	font-size: 20px;
-	line-height: 48px;
+header .orange-menu {
+	background: #FF4020;
 	float: left;
-	margin-right: 20px;
-	color: #666;
+	padding: 0 10px;
 }
-
-.header #facebook{
-	color: #3B5998;
+header .orange-menu h1 {
+	color: white;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 48px;
+	display: inline;
 }
-
-.header #twitter{
-	color: #55ACEE;
+header .orange-menu i {
+	color: white;
 }
-
-.header i:first-child{
+header .bars{
+	float: left;
+	margin-left: 15px;
+	display: none;
+}
+header .bars i{
+	font-size: 14px;
+	line-height: 48px;
+	color: #999;
+	transition: all .5s ease;
+	font-weight: 400;
+}
+header .bars i:hover{
+	color: #000;
+}
+header .menu-list {
+	float: left;
 	margin-left: 10px;
 }
-
-.header i:last-child{
-	float: right;
+header .menu-list li {
+	display: inline-block;
+	margin-left: 15px;
 }
-
-.menu{
-	background: #FF4020;
-	width: 120px;
-	height: 48px;
-	color: white;
-	font-size: 25px;
-	font-weight: bold;
+header .menu-list li h2:hover {
+	color: #000;
+}
+header .menu-list li h2 {
+	font-size: 14px;
 	line-height: 48px;
+	text-transform: uppercase;
+	color: #999;
+	font-weight: 400;
+	transition: all .5s ease;
+}
+header .more {
 	float: left;
+	margin-left: 15px;
 }
-.menu i{
+header .more h2 {
+	line-height: 48px;
+	font-size: 14px;
+	color: #999;
+	font-weight: 400;
+	text-transform: uppercase;
+	transition: all .5s ease;
+}
+header .more h2:hover {
+	color: #000;
+}
+header .header-social {
+	float: right;
+	margin-right: 20px;
+}
+header .header-social-list li {
+	display: inline-block;
+	margin-right: 10px;
+}
+header .header-social-list li i {
+	line-height: 48px;
+	font-size: 20px;
+	color: #999;
+	transition: all .5s ease;
+}
+header .header-social-list li i:hover {
+	transform: scale(1.2);
+}
+header .search {
+	float: right;
+	margin-right: 10px;
+}
+header .search i {
+	line-height: 48px;
+	color: #999;
 	font-size: 18px;
-	color: #fff;
+	transition: all .5s ease;
 }
+header .search i:hover {
+	transform: scale(1.2);
+}
+
+@media only screen and (max-width: 980px){
+	.menu-list{
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 360px){
+	.bars{
+		display: inline-block !important;
+	}
+	.menu-list{
+		display: none;
+	}
+	.more{
+		display: none;
+	}
+	.menu-news{
+		display: none !important;
+	}
+}
+
 
 /*Cover*/
 
@@ -98,19 +181,19 @@ a {
 	font-weight: bold;
 }
 .cover-news#news1 {
-	background: url("../img/crnjo.jpg") no-repeat;
+	background: url("../img/crnjo.jpg") no-repeat 50% 50%;
 	background-size: cover;
 }
 .cover-news#news2 {
-	background: url("../img/ticketprice.jpg") no-repeat;
+	background: url("../img/ticketprice.jpg") no-repeat 50% 50%;
 	background-size: cover;
 }
 .cover-news#news3 {
-	background: url("../img/uber.jpg") no-repeat;
+	background: url("../img/uber.jpg") no-repeat 50% 50%;
 	background-size: cover;
 }
 .cover-news#news4 {
-	background: url("../img/connectfour.jpg") no-repeat;
+	background: url("../img/connectfour.jpg") no-repeat 50% 50%;
 	background-size: cover;
 }
 
@@ -332,16 +415,23 @@ a {
 
 /*Media queries*/
 
-@media only screen and (max-width: 768px) {}
-@media only screen and (max-width: 320px) {
-	.spacer {
-		line-height: 1.5em;
-		padding: .5em 0;
-		height: auto;
+@media only screen and (max-width: 980px){
+	.menu-list{
+		display: none;
 	}
-	.spacer strong {
-		display: block;
-		line-height: normal;
-		line-height: 1.5em;
+}
+
+@media only screen and (max-width: 360px){
+	.bars{
+		display: inline-block !important;
+	}
+	.menu-list{
+		display: none;
+	}
+	.more{
+		display: none;
+	}
+	.menu-news{
+		display: none !important;
 	}
 }
