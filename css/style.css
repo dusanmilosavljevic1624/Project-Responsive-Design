@@ -71,18 +71,19 @@ header .bars i {
 header .bars i:hover {
 	color: #000;
 }
-header .menu-list {
+header nav {
 	float: left;
 	margin-left: 10px;
+	list-style: none;
 }
-header .menu-list li {
+header nav li {
 	display: inline-block;
 	margin-left: 15px;
 }
-header .menu-list li h2:hover {
+header nav li a:hover {
 	color: #000;
 }
-header .menu-list li h2 {
+header .menu-list li a {
 	font-size: 14px;
 	line-height: 48px;
 	text-transform: uppercase;
@@ -94,7 +95,7 @@ header .more {
 	float: left;
 	margin-left: 15px;
 }
-header .more h2 {
+header .more a {
 	line-height: 48px;
 	font-size: 14px;
 	color: #999;
@@ -102,7 +103,7 @@ header .more h2 {
 	text-transform: uppercase;
 	transition: all .5s ease;
 }
-header .more h2:hover {
+header .more a:hover {
 	color: #000;
 }
 header .header-social {
@@ -270,7 +271,6 @@ header .search i:hover {
 	background-size: cover;
 }
 
-
 /*News Section*/
 
 .section-header {
@@ -344,24 +344,22 @@ header .search i:hover {
 	color: #888;
 }
 
-/*Spacer*/
+/*Announcement Section*/
 
-.spacer {
+.announcement {
 	background: yellow;
-	height: 3em;
 	text-align: center;
-	line-height: 3em;
+	padding: 10px;
 }
-.spacer a {
+.announcement a {
 	color: #555;
 	font-size: 14px;
-	line-height: 18px;
 	transition: all .5s ease;
 }
-.spacer a:hover {
+.announcement a:hover {
 	color: #222;
 }
-.spacer strong {
+.announcement strong {
 	text-transform: uppercase;
 }
 
@@ -493,26 +491,6 @@ header .search i:hover {
 	.menu-list {
 		display: none;
 	}
-}
-@media only screen and (max-width: 360px) {
-	.bars {
-		display: inline-block !important;
-	}
-	.menu-list {
-		display: none;
-	}
-	.more {
-		display: none;
-	}
-	.menu-news {
-		display: none !important;
-	}
-}
-
-@media only screen and (max-width: 980px) {
-	.menu-list {
-		display: none;
-	}
 	.large-cover {
 		width: 100%;
 		display: block;
@@ -530,7 +508,14 @@ header .search i:hover {
 		margin-left: 34%;
 	}
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 690px){
+	.announcement strong{
+		display: block;
+		margin-bottom: 10px;
+		font-size: 14px;
+	}
+}
+@media only screen and (max-width: 360px) {
 	.bars {
 		display: inline-block !important;
 	}
@@ -545,26 +530,26 @@ header .search i:hover {
 	}
 	.large-cover {
 		width: 100%;
-		height: 150px;
+		height: 200px;
 	}
 	.large-cover:last-child {
 		clear: both;
-		height: 470px;
+		height: 620px;
 	}
 	.medium-cover:first-child {
-		height: 150px;
+		height: 200px;
 		width: 100%;
 		margin-bottom: 10px;
 	}
 	.medium-cover:last-child {
 		clear: both;
-		height: 300px;
+		height: 400px;
 		margin: 0 0 10px 0;
 		width: 100%;
 	}
 	.small-cover {
 		width: 100%;
-		height: 150px;
+		height: 200px;
 	}
 	.small-cover:last-child {
 		clear: both;
@@ -604,5 +589,34 @@ header .search i:hover {
 	.medium-cover .small-cover .cover-text-container .cover-text p {
 		color: #999;
 		font-size: 10px;
+	}
+}
+@media only screen and (max-width: 320px) {
+	.bars {
+		display: inline-block !important;
+	}
+	.menu-list {
+		display: none;
+	}
+	.more {
+		display: none;
+	}
+	.menu-news {
+		display: none !important;
+	}
+	.large-cover {
+		height: 150px;
+	}
+	.large-cover:last-child {
+		height: 470px;
+	}
+	.medium-cover:first-child {
+		height: 150px;
+	}
+	.medium-cover:last-child {
+		height: 300px;
+	}
+	.small-cover {
+		height: 150px;
 	}
 }
